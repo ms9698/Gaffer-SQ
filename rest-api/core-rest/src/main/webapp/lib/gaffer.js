@@ -68,7 +68,7 @@ function loadExample(exampleButton){
             row.children[1].firstElementChild.value = "uk.gov.gchq.gaffer.operation.OperationChain"
         }
 
-        exampleUrl = version + "/example" + urlSuffix.replace(/\{(.*?)\}/, classPathParam);
+        exampleUrl = version + "/example" + urlSuffix.replace(/\{[^{}]*\}/, classPathParam);
     } else {
         var classPathParam = $(exampleButton).parent().children(".example-operations-select").val();
         exampleUrl = version + "/graph/operations/" + classPathParam + "/example";
