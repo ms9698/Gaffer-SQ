@@ -30,7 +30,7 @@ class PropertiesUtilTest {
     void shouldThrowExceptionWithInvalidStringName() {
         assertThatIllegalArgumentException()
                 .isThrownBy(() -> PropertiesUtil.validateName(INVALID_STRING))
-                .withMessage("Property is invalid: inv@l1dStr|ng&^, it must match regex: [a-zA-Z0-9|-]*\\b");
+                .withMessage("Property is invalid: inv@l1dStr|ng&^, it must match regex: [a-zA-Z0-9\\-|\\w|\\-]*+");
     }
 
     @Test
