@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
  * Utility methods for Schema Properties.
  */
 public final class PropertiesUtil {
-    private static final Pattern PROPERTY_ALLOWED_CHARACTERS = Pattern.compile("[a-zA-Z0-9|-]*\\z");
+    private static final Pattern PROPERTY_ALLOWED_CHARACTERS = Pattern.compile("[a-zA-Z0-9|-]*\\b");
 
     private PropertiesUtil() {
         // Private constructor to prevent instantiation.
